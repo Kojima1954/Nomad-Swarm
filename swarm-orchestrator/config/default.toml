@@ -1,0 +1,38 @@
+[node]
+id = "node-alpha"
+display_name = "Node Alpha"
+
+[matrix]
+homeserver_url = "http://conduit:6167"
+user_id = "@orchestrator:yourdomain.tld"
+password = "changeme"
+room_id = "!deliberation:yourdomain.tld"
+
+[ollama]
+base_url = "http://ollama:11434"
+model = "llama3.1:8b"
+temperature = 0.3
+max_tokens = 2048
+embedding_model = "nomic-embed-text"
+
+[qdrant]
+url = "http://qdrant:6333"
+collection = "swarm_summaries"
+
+[gotosocial]
+base_url = "http://gotosocial:8080"
+access_token = "changeme"
+actor_handle = "@node-alpha@yourdomain.tld"
+
+[crypto]
+private_key_path = "/data/keys/node.key"
+public_key_path = "/data/keys/node.pub"
+
+[rounds]
+mode = "timer"
+interval_seconds = 300
+message_threshold = 50
+phases = ["DISCUSS", "SUMMARIZE", "PROPAGATE"]
+
+[topology]
+topology_file = "/etc/orchestrator/topology.toml"
