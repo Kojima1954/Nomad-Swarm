@@ -1,0 +1,30 @@
+[[nodes]]
+node_id = "node-alpha"
+actor_uri = "https://alpha.example.org/users/node-alpha"
+encryption_public_key = "cxMK/hXbz2zaOaojeYUCH/Fp8i1XwW+HhoLPXEhL7X4="
+
+[[nodes]]
+node_id = "node-beta"
+actor_uri = "https://beta.example.org/users/node-beta"
+encryption_public_key = "pzlC7VdcJLNalcZLwp6JZE5YaIYLrzEMU5wtbmZb7Dc="
+
+[[nodes]]
+node_id = "node-gamma"
+actor_uri = "https://gamma.example.org/users/node-gamma"
+encryption_public_key = "z1dc0p5Zj1cZJ/xrGavAfKYH+kBngNNUtK0KpBc6Mzw="
+
+# Adjacency list (edges in the swarm graph):
+[[edges]]
+from = "node-alpha"
+to = "node-beta"
+bidirectional = true
+
+[[edges]]
+from = "node-alpha"
+to = "node-gamma"
+bidirectional = true
+
+[[edges]]
+from = "node-beta"
+to = "node-gamma"
+bidirectional = true
